@@ -1,0 +1,220 @@
+@import './foundation/style';
+@import './component/header';
+@import './component/footer';
+@import './component/body-container';
+
+
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .container{
+        width: 970px;
+        background-color: white;
+        margin: 0 auto;
+        .navigation-text {
+            display: block;
+            ol {
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                li {
+                    list-style: none;
+                    margin-right: 5px;
+                }
+                li:after {
+                    content: " >> ";
+                    font-size: 11px;
+                    color: #33659c;
+                }
+                
+                a {
+                    text-decoration: none;
+                    color: #33659c;
+                    font-size: 11px;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .define-search {
+            border: 1px solid #ddd;
+            .search-box {
+                position: relative;
+                box-sizing: border-box;
+                border-bottom: 1px solid #ddd;
+                .text-input {
+                    width: 100%;
+                    padding: 0 50px;
+                    box-sizing: border-box;
+                }
+                input[type="text"] {
+                    height: 47px;
+                    width: calc(100% - 60px);
+                    border: 0;
+                    margin: 0;
+                    vertical-align: middle;
+                    outline: none;
+                }
+                button {
+                    position: absolute;
+                    top: 14px;
+                    border: none;
+                    background: transparent;
+                    outline: none;
+                    i{
+                        font-size: 18px;
+                        
+                    }
+                }
+            }
+            .filter-container {
+                display: grid;
+                justify-content: space-around;
+                grid-template-columns: 40% 40% 20%;
+                height: 47px;
+                .flex{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 20px;
+                    border-right: 1px solid #ddd;
+
+                }
+            }
+            
+        }
+        .main-items{
+            .filter-box {
+                border: 1px solid #ddd;
+                margin: 20px;
+                /* padding: 20px; */
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: 55% 40% 5%;
+                justify-content: start;
+                height: 44px;
+                align-items: center;
+                .seller-type{
+                    border-right: 1px solid #ddd;
+                    height: 100%;
+                    align-items: center;
+                    display: flex;
+                    a{
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        font-family: Verdana;
+                        font-size: 1em;
+                        color: darkgrey;
+                        cursor: pointer;
+                    }
+                    .active{
+                        color: black;
+                        border-bottom: 2px solid #FFD100;
+                        padding-bottom: 10px;
+                        padding-top: 10px;
+                    }
+                }
+            }
+            .icon-display {
+                justify-self: center;
+            }
+            .filter {
+                height: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding-left: 20px;
+                border-right: 1px solid #ddd;
+                i {
+                    margin-left: 10px;
+                }
+            }  
+        }
+        .items-container{
+            ul {
+                list-style: none;
+                padding: 0;
+                .item{
+                    position: relative;
+                    padding: 10px 0;
+                    padding-left: 20px;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #ddd;
+                    .layout{
+                        display: flex;
+                        .layout-left {
+                            height: 100px;
+                            width: 133px;
+                            padding-right: 10px;
+                            .image-thumbnail {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .layout-right{
+                            padding-left: 10px;
+                            h3{
+                                margin-top: 0;
+                                margin-bottom: 20px;
+                                font-size: 14px;
+                                line-height: 17px;
+                                max-height: 35px;   
+                            }
+                            .ad-price{
+                                .price{
+                                    color: #d0021b;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                    height: 20px;
+                                    line-height: 15px;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                    .bottom-item{
+                        display: flex;
+                        font-size: 12px;
+                        opacity: 0.5;
+                        position: absolute;
+                        top: 95px;
+                        left: 173px;
+                        .time-stamp {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            border-left: 1px solid #ddd;
+                            border-right: 1px solid #ddd;
+                        }
+                        .seller {
+                            padding-right: 5px;
+                        }
+                        .location {
+                            padding-left: 5px;
+                        }
+                        
+                    }
+                    .icon-save {
+                        position: absolute;
+                        top: 72px;
+                        right: 20px;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                        button {
+                            height: 30px;
+                            width: 30px;
+                            background: none;
+                            outline: none;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }

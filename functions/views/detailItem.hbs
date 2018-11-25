@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Product View </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./detailItem.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- TOP HEADER -->
+<div class="header">
+		<div class="container">
+			<div class="logo">
+				<a href="#">
+					<img src="../../images/transparent_logo.png" alt="">
+				</a>
+			</div>
+			<div class="menu">
+				<div class="menu-item hover">
+					<a href="#">
+						<img src="../../images/searchActive.svg" alt="">
+						<span>Tìm rao vặt</span>
+					</a>
+				</div>
+				<div class="menu-item hover">
+					<a href="#">
+						<img src="../../images/notificationActive.svg" alt="">
+						<span>Thông báo</span>
+					</a>
+				</div>
+				<div class="menu-item hover">
+					<a href="#">
+						<img src="../../images/userActive.svg" alt="">
+						<span>Tôi bán</span>
+					</a>
+				</div>
+				<div class="menu-item hover more-info" id="more-info-menu">
+					<a href="#">
+						<img src="../../images/moreActive.svg" alt="">
+						<span>Thêm</span>
+					</a>
+					<div class="collasp-menu hide">
+						<div class="signup">
+							<a href="#" class="avatar"></a>
+							<div class="float-left" style="margin-top: 10px; margin-left: 5px;"><a href="#">Đăng nhạp/Đăng ký</a></div>
+							<div style="clear: both;"></div>
+						</div>
+						<div class="break-line"><hr></div>
+						<div class="item">
+							<a href="#">
+								<img src="https://static.chotot.com.vn/storage/chotot-icons/svg/circle-heart.svg" alt="">
+								<span>Tin đăng đã lưu</span>
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="https://static.chotot.com.vn/storage/chotot-icons/svg/circle-bookmark.svg" alt="">
+								<span>Tìm kiếm đã lưu</span>
+							</a>
+						</div>
+						<div class="break-line"><hr></div>
+						<div class="item">
+							<a href="#">
+								<img src="https://static.chotot.com.vn/storage/chotot-icons/svg/circle-plus.svg" alt="">
+								<span>Tạo cửa hàng/Chuyên trang</span>
+							</a>
+						</div>
+						<div class="item">
+							<a href="#">
+								<img src="https://static.chotot.com.vn/storage/chotot-icons/svg/circle-megaphone.svg" alt="">
+								<span>Quảng cáo tốt</span>
+							</a>
+						</div>
+						<div class="break-line"><hr></div>
+						<div class="item" style="margin-bottom: 5px">
+							<a href="#">
+								<img src="https://static.chotot.com.vn/storage/chotot-icons/svg/float.svg" alt="">
+								<span>Trợ giúp</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="post-item-button">
+					<a href="#" class="button-menu">
+						Đăng tin
+					</a>
+				</div>
+			</div>
+		</div>
+
+    </div>
+    <!-- TOP HEADER -->
+    
+    <!-- BODY -->
+    <div class="body-container">
+        <div class="layout">
+            <div class="layout-left">
+                <div class="image-slide"> 
+                    <div class="image">
+						{{#each images}}
+						 <div class="igItem">
+                            <img src="{{this}}" alt="">
+                        </div>
+						{{/each}}
+                    </div>
+                    <div class="indicator">
+                       <ul>
+                           <li><button class="active"></button></li>
+                       </ul>
+                    </div>
+                    <div class="left-button">
+                        <button id="left-button" class="button-left-right"><i class="fas fa-chevron-left"></i></button>
+                    </div>
+                    <div class="right-button">
+                        <button id="right-button" class="button-left-right"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+
+                </div>
+                <div class="description">
+                    <h3>{{data.title}}</h3>
+                    <div class="price">
+                        <span> {{data.price}} đ</span>
+                    </div>
+                    <div class="text">
+                        <span>{{data.description}}</span>
+                    </div>
+                </div>
+                <div class="location">
+                    <h3>Khu vực</h3>
+                    <div>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <span> {{data.locationSuburb}} </span>
+                    </div>
+                </div>
+                <div class="social-share">
+                    <h3>Chia sẻ tin đăng này cho bạn bè:</h3>
+                    <div class="social-button">
+                        <a href="#"><img src="https://static.chotot.com.vn/storage/chotot-icons/svg/circle-facebook.svg" alt=""></a>
+                        <a href="#"><img src="https://static.chotot.com.vn/storage/chotot-icons/svg/circle-messenger.svg" alt=""></a>
+                        <a href="#"><img src="https://static.chotot.com.vn/storage/chotot-icons/svg/circle-zalo.svg" alt=""></a>
+                        <a href="#"><img src="https://static.chotot.com.vn/storage/chotot-icons/svg/circle-copylink.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="secutity">
+                    <img src="https://static.chotot.com.vn/storage/marketplace/shield-iconx4.png" alt="">
+                    <span>Tin rao này đã được kiểm duyệt. Nếu gặp vấn đề, vui lòng báo cáo tin đăng hoặc liên hệ CSKH để được trợ giúp.</span>  
+                </div>
+                <div class="report-button">
+                    <a href="#">
+                        <button>
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Báo cáo tin đăng</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="layout-right">
+                <div class="user-detail">
+                    <div class="avatar">
+                        <img class="avatar-icon" src="https://static.chotot.com.vn/storage/C2C_CDN_PRODUCTION/32ea486819346b666d9e012fea3f5be0.png" alt="">
+                        <div class="icon">
+                            <img src="https://static.chotot.com.vn/storage/C2C_CDN_PRODUCTION/80c46ec5c9f4fcb466048d5e4065b570.png" alt="">
+                        </div> 
+                    </div>
+                    <div class="detail">
+                        <h3>Tony</h3>
+                        <div class="address">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                            <span>Tooronga, Victoria, Melbourne</span>
+                        </div>
+                        <div class="date-signup">
+                            <span>Ngày tham gia:</span>
+                            <span>27-10-2018</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-show-number">
+                    <button>
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Nhấn để hiện số</span>
+                    </button>
+                </div>
+                <div class="notice">
+                    <img src="https://static.chotot.com.vn/storage/images/tips/5_other_cate.png" alt="">
+                    <div class="text">
+                        <p>Nên kiểm tra nguồn gốc sản phẩm trước khi mua bán</p>
+                        <a href="#" class="see-more">Tìm hiểu thêm >></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BODY -->
+    	<!-- FOOTER -->
+	<div class="footer">
+			<div class="container">
+				<div class="link item">
+					<h2 class="headline">Liên kết</h2>
+					<ul class="social-link">
+						<li>
+							<a href="#">
+								<img class="icon" alt="Facebook" src="https://static.chotot.com.vn/storage/marketplace/common/fb.svg">
+								<span>Facebook</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img class="icon" alt="Facebook" src="https://static.chotot.com.vn/storage/marketplace/common/gg.svg">
+								<span>Google+</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img class="icon" alt="Facebook" src="https://static.chotot.com.vn/storage/marketplace/common/youtube.svg">
+								<span>Youtube</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="app-store item">
+					<h2 class="headline">Bản di động</h2>
+					<a href="#">
+						<img alt="App Store" height="32" src="https://static.chotot.com.vn/storage/marketplace/ios-logo.svg">
+					</a>
+					<a href="#">
+						<img alt="Google Play" height="32" src="https://static.chotot.com.vn/storage/marketplace/gg-play.svg">
+					</a>
+				</div>
+				<div class="support item">
+					<h2 class="headline">Hỗ trợ khách hàng</h2>
+					<ul class="">
+						<li class="">
+							<a class="" href="http://trogiup.chotot.com" target="_blank" rel="noopener noreferrer">Trung tâm trợ giúp</a>
+						</li>
+						<li class="">
+							<a class="" href="http://trogiup.chotot.com/mua-ban-an-toan" target="_blank" rel="noopener noreferrer">An toàn mua bán</a>
+						</li>
+						<li class="">
+							<a class="" href="http://trogiup.chotot.com/quy-dinh" target="_blank" rel="noopener noreferrer">Quy định cần biết</a>
+						</li>
+						<li class="">
+							<a class="" href="http://trogiup.chotot.com/lien-he" target="_blank" rel="noopener noreferrer">Liên hệ hỗ trợ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="about item">
+					<h2 class="headline">Về Chotot.com</h2>
+					<ul class="">
+						<li class="">
+							<a class="link" href="http://trogiup.chotot.com/quy-dinh/gioi-thieu-chotot-com/" target="_blank" rel="noopener noreferrer">Giới thiệu</a>
+						</li>
+						<li class="">
+							<a class="link" href="http://careers.chotot.com" target="_blank" rel="noopener noreferrer">Tuyển dụng</a>
+						</li>
+						<li class="">
+							<a class="link" href="http://truyenthong.chotot.com" target="_blank" rel="noopener noreferrer">Truyền thông</a>
+						</li>
+						<li class="">
+							<a class="link" href="https://chotot.com/kinhnghiem" target="_blank" rel="noopener noreferrer">Blog</a>
+						</li>
+					</ul>
+				</div>
+				<div class="certificate item">
+					<h2 class="headline">Chứng nhận</h2>
+					<a class="" href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=33127"><img alt="Certification" height="38" src="https://static.chotot.com.vn/storage/marketplace/cerfiticate.png"></a>
+				</div>
+			</div>
+		</div>
+		<!-- FOOTER -->
+</body>
+{{!-- <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script> --}}
+
+<script src="../../vendor/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="./detailItem.js"></script>
+
+</html>

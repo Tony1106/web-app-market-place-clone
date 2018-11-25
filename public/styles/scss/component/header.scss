@@ -1,0 +1,128 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bgColor;
+    border-radius: 1px;
+    border: $borderbg;
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    font-size: 14px;z-index: 1000;
+    padding: 0 15px;
+    .container{
+        width: 970px;
+        background: $bgColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    .logo {
+        img{
+            height: 35px;
+        }
+    }
+    .menu{
+        .menu-item {
+            float: left;
+            height: 45px;
+            vertical-align: middle;
+            line-height: 45px;
+            cursor: pointer;
+            padding: 0 5px;
+            color: black;
+            position: relative;
+            img {
+                height: 22px;
+                vertical-align: middle;
+                padding: 0 5px;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            span {
+                color: black;
+            }
+            
+        }
+        #more-info-menu{
+            .collasp-menu {
+                width: 300px;
+                background-color: white;
+                position: absolute;
+                top: 45px;
+                right:  0px;
+                transition: 0.3s;
+                border: 1px solid #cacaca;
+                .float-left{
+                    float: left;
+                }
+                .signup{
+                    margin-top: 15px;
+                    margin-left: 5px;
+                    .avatar{
+                        height: 60px;
+                        width: 60px;
+                        background-image: url(https://static.chotot.com.vn/storage/marketplace/common/png/default_user.png);
+                        background-position: center;
+                        background-size: 100%;
+                        float: left;
+                        border-radius: 50%;
+                    }
+                }
+                .break-line{
+                    margin-top: 10px;
+                    hr{
+                        display: block;
+                        height: 1px;
+                        border: 0;
+                        border-top: 1px solid #cacaca;
+                        margin: 5px 0;
+                        padding: 0;
+                    }
+                }
+                .item{
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    line-height: 30px;
+                    img{
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+            .hide{
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        .hover:hover {
+            background-color: #e4b801;
+        }
+        .more-info img{
+            height: 10px;
+        }
+        .post-item-button{
+            float: left;
+            height: 45px;
+            line-height: 45px;
+            .button-menu{
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                text-transform: uppercase;
+                background: #fc9807;
+                color: #fff;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 4px;
+                padding: 8px;
+                text-decoration: none;
+            }
+        }
+    }
+    
+}
