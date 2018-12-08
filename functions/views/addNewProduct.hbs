@@ -5,13 +5,13 @@
     <title> Product View </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    {{!-- <link rel="stylesheet" href="./detailItem.css"> --}}
+     <link rel="stylesheet" href="/styles/css/addNewProduct.css"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
 </head>
 
 <body>
- 	<!-- TOP HEADER -->
+   	<!-- TOP HEADER -->
 	<div class="header">
 		<div class="container">
 			<div class="logo">
@@ -98,26 +98,32 @@
     <!-- BODY -->
     <div class="body-container">
         <div class="layout">
-            <div class="title">Đăng Ký</div>
-            <form action="">
-                <input type="text" name="email" id="email" placeholder="Nhập email" class="form-control">
-                <input type="text" name="password" id="password" placeholder="Nhập mật khẩu" class="form-control">
-                <div class="button-sign-up">
-                    <button>Đăng Ký</button>
-                </div>
-                <div> Bấm vào đăng ký nghĩa là bạn đã đọc và đồng ý với
-                    <a href="http://trogiup.chotot.com/quy-dinh/hoat-dong/">
-                        Điều khoản sử dụng của Chợ Tốt 
-                    </a>
-                    <div>
-                        <strong>Lưu ý:</strong>
-                         Do sự cố mạng, hệ thống tạm thời ngưng hỗ trợ đăng ký tài khoản mạng Vietnammobile.
-                    </div>
-                </div>
-                <p class="">Ở bước tiếp theo bạn sẽ nhận được mã xác nhận số điện thoại gửi qua SMS</p>
-                <p class="">Bạn đã có tài khoản? <a>Đăng nhập</a></p>
+            <div class="heading">
+                Add New Product
+            </div>
+            <form action="" class="form-group">
+                <input type="text" placeholder="Nhập tên sản phẩm" id="title">
+                <input type="text" placeholder="Nhập tên mô tả sản phẩm" id="description">
+                <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="category" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Chọn danh mục
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="category">
+                          <a class="dropdown-item" href="#" data-value="1">Xe cộ</a>
+                          <a class="dropdown-item" href="#" data-value="2">Đồ điện tử</a>
+                          <a class="dropdown-item" href="#" data-value="3">Nội ngoại thất</a>
+                          <a class="dropdown-item" href="#" data-value="4">Thời Trang</a>
+                          <a class="dropdown-item" href="#" data-value="5"> Mẹ và bé</a>
+                          <a class="dropdown-item" href="#" data-value="6">Thú cưng</a>
+                          <a class="dropdown-item" href="#" data-value="7">Việc làm</a>
+                          <a class="dropdown-item" href="#" data-value="8">Dịch Vụ</a>
+                        </div>
+                      </div>
+                <input type="text" placeholder="Nhập địa điểm" id="localSuburb">
+                <input type="file" placeholder="Nhập địa điểm" id="fileUpload">
+                <button id="submit">Submit</button>
+                <img src="" alt="">
             </form>
-
         </div>
     </div>
     <!-- BODY -->
@@ -200,10 +206,25 @@
     </div>
     <!-- FOOTER -->
 </body>
-{{!--
-<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script> --}}
-
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAM22SUgsxPmyPx9G9wKbsABOY6u2CrWNo",
+    authDomain: "australia-handbook.firebaseapp.com",
+    databaseURL: "https://australia-handbook.firebaseio.com",
+    projectId: "australia-handbook",
+    storageBucket: "australia-handbook.appspot.com",
+    messagingSenderId: "772324184653"
+  };
+  firebase.initializeApp(config);
+</script>
 <script src="../../vendor/jquery-3.3.1.slim.min.js"></script>
-{{!-- <script type="text/javascript" src="./detailItem.js"></script> --}}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="/screen/addNewProduct.js"></script>
 
 </html>

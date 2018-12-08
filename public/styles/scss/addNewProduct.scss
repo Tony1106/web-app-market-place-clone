@@ -1,0 +1,52 @@
+@import './foundation/style';
+@import './component/header';
+@import './component/footer';
+@import './component/body-container';
+
+.body-container{
+    padding: 0 260px;
+    background: #dddddd;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    p{
+        font-size: 1em;
+        height: 2px;
+    }
+    .layout{
+        // margin-top: 50px;
+        margin: 20px auto;
+        height: 80%;
+        width: 800px;
+        padding: 20px 20px;
+        padding-top: 100px;
+        background: white;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        .heading{
+            font-size: 20px;
+            font-weight: 800;
+            color: orange;
+        }
+        .form-group{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            input{
+                margin: 20px;
+            }
+        }
+        input{
+            width: 100%;
+        }
+    }
+
+}
